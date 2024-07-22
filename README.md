@@ -14,4 +14,4 @@
 
 ![](./examples/c.png)
 
-![](./examples/s.png)
+![](./examples/s2.png)
