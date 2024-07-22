@@ -69,7 +69,7 @@ def generate_response(input_text):
         search_invoc = search_workflow_invoker(input_text)
         wp = search_invoc['winner_property']
         reasoning = search_invoc['winner_reasoning']
-        st.write("[{resp}] The best property calculated was \n")
+        st.write(f"[{resp}] The best property calculated was \n")
         st.write(f"{property_stringifyer(wp)}.\n\n")
         st.info(f"\n{reasoning}")
         st.info(f"\n{wp.url}")
