@@ -30,7 +30,7 @@ from langchain.pydantic_v1 import BaseModel, Field
 from enum import Enum
 
 from consultation import consultation_workflow_invoker
-from search import search_workflow_invoker
+from search import search_workflow_invoker, property_stringifyer
 
 
 class QueryType(BaseModel):
@@ -69,8 +69,10 @@ def generate_response(input_text):
         search_invoc = search_workflow_invoker(input_text)
         wp = search_invoc['winner_property']
         reasoning = search_invoc['winner_reasoning']
-        r = f"""The best property calculated was {str(wp)}. <br/>For the following reasons:\n{reasoning}"""
-        st.info(r)
+        st.write("[{resp}] The best property calculated was \n")
+        st.write(f"{property_stringifyer(wp)}.\n\n")
+        st.info(f"\n{reasoning}")
+        st.info(f"\n{wp.url}")
         return
     consul_invoc = consultation_workflow_invoker(input_text)
     outp = f"[{resp}]\n"+consul_invoc

@@ -5,3 +5,4 @@ langsmith
 google-search-results
 tavily-python
 streamlit
+pydantic
