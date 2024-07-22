@@ -1,0 +1,7 @@
+langchain
+langchain-core
+langchain-community
+langsmith
+google-search-results
+tavily-python
+streamlit
