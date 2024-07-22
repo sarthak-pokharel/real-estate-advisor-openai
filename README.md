@@ -8,3 +8,10 @@
 ### How to run?
 
 `streamlit run bundle.py`
+
+
+## Previews
+
+![](c.png)
+
+![](s.png)
