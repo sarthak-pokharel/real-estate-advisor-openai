@@ -12,6 +12,6 @@
 
 ## Previews
 
-![](c.png)
+![](./examples/c.png)
 
-![](s.png)
+![](./examples/s.png)
